@@ -11,3 +11,22 @@ body {
 h1 {
     font-weight: 700;
 }
+.card{
+    background: transparent;
+    color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 15px 1px rgba(255,255,255,0.75);
+    box-shadow: -2px 2px 6px 1px rgba(255,255,255,0.75);
+    -webkit-box-shadow: -2px 2px 6px 1px rgba(255,255,255,0.75);
+    -moz-box-shadow: -2px 2px 6px 1px rgba(255,255,255,0.75);
+}
+.row i{
+    font-size: 25px;
+}
+.My-services{
+    padding: 10px 0;
+    background: black;
+}
