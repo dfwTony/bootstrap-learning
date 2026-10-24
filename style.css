@@ -11,7 +11,7 @@ body {
 h1 {
     font-weight: 700;
 }
-.card{
+.card r{
     background: transparent;
     color: #f8f9fa;
     transition: all 0.3s ease;
