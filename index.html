@@ -12,46 +12,10 @@
     <!-- main css  -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- custom css -->
-     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <!-- Containers Spacing and Buttons -->
-    <!-- <header class="bg-dark text-white py-3">
-        <div class="container ">
-            <h1 class="h3 mb-0">My Bootstrap Website</h1>
-        </div>
-    </header>
-    <main class="container my-5 border">
-        <section class="p-4 rounded">
-            <h2 class="text-primary">Welcome to my website</h2>
-            <p class="lead">I am learning how to build responsive websites using HTML, CSS and BOOTSTRAP.</p>
-
-            <button class="btn btn-primary me-2">Get Started</button>
-            <button class="btn btn-outline-dark">Learn More</button>
-        </section>
-    </main> -->
-
-    <!-- Practice Examples -->
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-6 border">
-                <h1>First column</h1>
-            </div>
-            <div class="col-6 border">
-                <h1>Second column</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 border">
-        <h1 class="h3">My content</h1>
-    </div> -->
-
-    <!-- Responsive Service Section -->
-
-
+<!-- navsection -->
+    <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><span class="text-primary">TONY</span>ABUYA</a>
@@ -63,42 +27,62 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#home">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- <header class="bg-dark text-white py-3">
-        <div class="container">
-            <h1 class="h3 mb-0">Tony Abuya</h1>
-            <p class="mb-0">My Development Web Journey</p>
-        </div>
-    </header> -->
+    </header>
 
-    <main class="container my-5">
-        <section class="mb-5">
+
+<!-- About and Service section  -->
+    <main id="home" class="container my-5">
+        <!-- About Section  -->
+        <section>
+            <h1 class="h2">About Me</h1>
+            <p>I'm learning to build responsive websites using HTML, CSS and Bootstrap.</p>
+        </section>
+
+        <!-- Service Section  -->
+
+        <section id="services" class="my-services py-5">
             <h2 class="text-primary mb-3">My services</h2>
+            <!-- Bootstrap alert -->
+            
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <strong>Welcome!</strong> Explore the services I offer below.
+
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"></button>
+            </div>
+
             <p>Explore the services I am learning to showcase
             through responsive web design.</p>
 
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100">
                     <div class="card-body">
                         <i class="bi bi-code-slash text-primary fw-bold"></i>
+
+                        <div class="d-flex align-items-center gap-4 mb-2">
                         <h3 class="h5 card-title">
                             Web Development
                         </h3>
+                        <span class="badge rounded-pill badge-custom">Available</span>
+                        </div>
+
                         <p class="card-text">
                             Building responsive websites using
                             HTML, CSS and Bootstrap.
@@ -109,11 +93,10 @@
                         </a>
                     </div>
                 </div>
-            
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100">
                     <div class="card-body">
                             <i class="bi bi-phone text-primary"></i>
                             <h3 class="h5 card-tittle">
@@ -131,9 +114,9 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100">
                     <div class="card-body">
-                                <i class="bi bi-palette text-primary"></i>
+                        <i class="bi bi-palette text-primary"></i>
                         <h3 class="h5 card-title">
                             Graphic Design
                         </h3>
@@ -149,7 +132,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm">
+                <div class="card h-100">
                     <div class="card-body">
                         <i class="bi bi-camera-reels text-primary"></i>
                         <h3 class="h5 card-title">
@@ -168,12 +151,52 @@
             </div>
             </div>
         </section>
-        <section id="contact" class="bg-light rounded p-4">
+        <section id="contact" class="container p-4">
             <h2 class="h4">Contact Me</h2>
-            <p class="mb-0">
-                More information about my services coming soon.
-            </p>
+            <p>Have a project in mind? Send me a message!</p>
+
+        <!-- success alert: hidden initialy  -->
+            <div id="successAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Success!</strong> Your message has been submitted successfully.
+
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div> 
+
+            <!-- contact form  -->
+
+            <form id="contactForm">
+                <!-- name  -->
+                 <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email  -->
+                 <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+                 </div>
+
+                 <!-- message  -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea class="form-control" name="message" id="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                </div>
+ 
+                <!-- submit button  -->
+                <button type="submit" class="btn btn-primary">
+                    Send Message
+                </button>
+            </form>
         </section>
     </main>
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- custom js  -->
+
+    <!-- custom JavaScript  -->
+     <script src="main.js"></script>
 </body>
 </html>
