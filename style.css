@@ -7,6 +7,9 @@ body {
     font-family: "poppins", sans-serif;
     background: #f8f9fa;
 }
+.nav-link:hover{
+    color: #084298 !important;
+}
 .card{
     background: black;
     color: #fff;
