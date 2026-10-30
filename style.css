@@ -28,7 +28,8 @@ body {
     background-color: #cfe2ff;
     color: #084298;
 }
-.card-icon1{
+.card-icon1 i{
     font-size: 30px;
+    font-weight: 900;
     color: #084298;
 }
